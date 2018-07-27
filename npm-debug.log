@@ -1,0 +1,59 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'search',
+1 verbose cli   'npm' ]
+2 info using npm@4.1.2
+3 info using node@v7.6.0
+4 silly mapToRegistry name -/all
+5 silly mapToRegistry using default registry
+6 silly mapToRegistry registry https://registry.npmjs.org/
+7 silly mapToRegistry data Result {
+7 silly mapToRegistry   raw: '-/all',
+7 silly mapToRegistry   scope: null,
+7 silly mapToRegistry   escapedName: null,
+7 silly mapToRegistry   name: null,
+7 silly mapToRegistry   rawSpec: '-/all',
+7 silly mapToRegistry   spec: '-/all',
+7 silly mapToRegistry   type: 'local' }
+8 silly mapToRegistry uri https://registry.npmjs.org/-/all
+9 verbose all-package-metadata creating entry stream from local cache
+10 verbose all-package-metadata C:\Users\tianyu\AppData\Roaming\npm-cache\registry.npmjs.org\-\all\.cache.json
+11 silly search searching packages
+12 warn Failed to read search cache. Rebuilding
+13 silly all-package-metadata Error: ENOENT: no such file or directory, stat 'C:\Users\tianyu\AppData\Roaming\npm-cache\registry.npmjs.org\-\all\.cache.json'
+13 silly all-package-metadata  cache read error:  { Error: ENOENT: no such file or directory, stat 'C:\Users\tianyu\AppData\Roaming\npm-cache\registry.npmjs.org\-\all\.cache.json'
+13 silly all-package-metadata   errno: -4058,
+13 silly all-package-metadata   code: 'ENOENT',
+13 silly all-package-metadata   syscall: 'stat',
+13 silly all-package-metadata   path: 'C:\\Users\\tianyu\\AppData\\Roaming\\npm-cache\\registry.npmjs.org\\-\\all\\.cache.json' }
+14 verbose all-package-metadata creating remote entry stream
+15 warn Building the local index for the first time, please be patient
+16 verbose all-package-metadata No cached data: requesting full metadata db
+17 verbose request uri https://registry.npmjs.org/-/all
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 11:42:15
+20 verbose request id 0990af466f7316a3
+21 http request GET https://registry.npmjs.org/-/all
+22 silly all-package-metadata request stream opened, code: 200
+23 silly all-package-metadata extracting latest
+24 verbose stack Error: Invalid JSON (Unexpected "\u001f" at position 0 in state STOP)
+24 verbose stack     at Parser.proto.charError (C:\Program Files\nodejs\node_modules\npm\node_modules\JSONStream\node_modules\jsonparse\jsonparse.js:78:16)
+24 verbose stack     at Parser.proto.write (C:\Program Files\nodejs\node_modules\npm\node_modules\JSONStream\node_modules\jsonparse\jsonparse.js:104:23)
+24 verbose stack     at Stream.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\JSONStream\index.js:23:12)
+24 verbose stack     at Stream.stream.write (C:\Program Files\nodejs\node_modules\npm\node_modules\JSONStream\node_modules\through\index.js:26:11)
+24 verbose stack     at DestroyableTransform.ondata (C:\Program Files\nodejs\node_modules\npm\node_modules\mississippi\node_modules\through2\node_modules\readable-stream\lib\_stream_readable.js:531:20)
+24 verbose stack     at emitOne (events.js:96:13)
+24 verbose stack     at DestroyableTransform.emit (events.js:189:7)
+24 verbose stack     at readableAddChunk (C:\Program Files\nodejs\node_modules\npm\node_modules\mississippi\node_modules\through2\node_modules\readable-stream\lib\_stream_readable.js:198:18)
+24 verbose stack     at DestroyableTransform.Readable.push (C:\Program Files\nodejs\node_modules\npm\node_modules\mississippi\node_modules\through2\node_modules\readable-stream\lib\_stream_readable.js:157:10)
+24 verbose stack     at DestroyableTransform.Transform.push (C:\Program Files\nodejs\node_modules\npm\node_modules\mississippi\node_modules\through2\node_modules\readable-stream\lib\_stream_transform.js:123:32)
+25 verbose cwd E:\front_end_test\script_learn
+26 error Windows_NT 10.0.17134
+27 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "search" "npm"
+28 error node v7.6.0
+29 error npm  v4.1.2
+30 error Invalid JSON (Unexpected "\u001f" at position 0 in state STOP)
+31 error If you need help, you may report this error at:
+31 error     <https://github.com/npm/npm/issues>
+32 verbose exit [ 1, true ]

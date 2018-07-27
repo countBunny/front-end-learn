@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>null</title>
+    <style>
+        div,
+        ul,
+        body,
+        li,
+        img {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .taobao li {
+            float: left;
+            margin: 0 10px;
+            color: #fff;
+            font-size: 16px;
+            line-height: 30px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        div.taobao {
+            background-color: #ff9000;
+            width: 990px;
+            height: 30px;
+        }
+
+        #banner li {
+            position: absolute;
+            left: 0;
+            top: 30px;
+            width: 100%;
+            height: 300px;
+            background-color: grey;
+        }
+
+        #banner img {
+            width: 100%;
+            height: 300px;
+        }
+
+        li img {
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="taobao">
+        <ul>
+            <li>天猫</li>
+            <li>聚划算</li>
+            <li>天猫超市</li>
+        </ul>
+    </div>
+    <div id="banner">
+        <ul>
+            <li>
+                <img src="img/banner1.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/banner2.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/banner3.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/banner4.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/banner5.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/banner6.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+
+
+    <script type="application/javascript">
+        animateBanner();
+        function animateBanner() {
+            var obj1 = document.getElementById('banner')
+            var li = obj1.getElementsByTagName('li')
+            //li[0].style.zIndex = 1;
+            var j = 0;
+            var timer;
+            var iIndex = 0;
+            for (var i = 0; i < li.length; i++) {
+                if (i === j) {
+                    li[i].style.opacity = '1';
+                    continue;
+                }
+                li[i].style.opacity = '0';
+            }
+            function showInTime() {
+                j++;
+                if (j >= li.length) {
+                    j = 0;
+                }
+                //li[j].style.zIndex = iIndex;
+                //iIndex++;
+                fadeIn(li[j], 500)
+            }
+            function fadeIn(obj, duration) {
+                clearInterval(obj.timer);
+                var FRAME_COUNT = 50;
+                obj.timer = setInterval(function () {
+                    var opacityValue = Number.parseFloat(obj.style.opacity);
+                    opacityValue += 1 / FRAME_COUNT;
+                    if (opacityValue > 1) {
+                        obj.style.opacity = 1;
+                        clearInterval(obj.timer);
+                        return;
+                    }
+                    obj.style.opacity = opacityValue;
+                    let index = j - 1;
+                    if (index < 0) {
+                        index = li.length - 1;
+                    }
+                    li[index].style.opacity = Math.max(0, 1 - opacityValue).toString();
+                }, duration / FRAME_COUNT);
+            }
+            timer = setInterval(showInTime, 3000);
+        }
+    </script>
+
+</body>
+
+</html>
