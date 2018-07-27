@@ -18,4 +18,20 @@
 
 aria-expended决定一个折叠元素是否要默认展开，如果控制折叠的元素不是button，那么还需要加上role=“button”来标明这是一个按钮的角色。  
 
->If your control element is targeting a single collapsible element – i.e. the **data-target** attribute is pointing to an id selector – you should add the **aria-controls** attribute to the control element, containing the id of the collapsible element. Modern screen readers and similar assistive technologies make use of this attribute to provide users with additional shortcuts to navigate directly to the collapsible element itself.  
+>If your control element is targeting a single collapsible element – i.e. the **data-target** attribute is pointing to an id selector – you should add the **aria-controls** attribute to the control element, containing the id of the collapsible element. Modern screen readers and similar assistive technologies make use of this attribute to provide users with additional shortcuts to navigate directly to the collapsible element itself.   
+
+```html
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
+</div>
+```
