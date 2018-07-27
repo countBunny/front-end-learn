@@ -35,3 +35,16 @@ aria-expended决定一个折叠元素是否要默认展开，如果控制折叠�
   </div>
 </div>
 ```
+### Screenreaders
+Use screenreader utilities to hide elements on all devices except screen readers.
+
+Hide an element to all devices except screen readers with .sr-only. Combine .sr-only with .sr-only-focusable to show the element again when it’s focused (e.g. by a keyboard-only user). Can also be used as mixins.
+```css
+// Usage as a mixin
+.skip-navigation {
+  @include sr-only;
+  @include sr-only-focusable;
+}
+```
+该属性对所有设备都不可见，只有screenreader才能显示出来。
+>A screen reader is a form of assistive technology (AT) which is essential to people who are blind, as well as useful to people who are visually impaired, illiterate, or have a learning disability. Screen readers are software applications that attempt to convey what people with normal eyesight see on a display to their users via non-visual means, like text-to-speech,[4], sound icons,[5] or a Braille device.[2] They do this by applying a wide variety of techniques that include for example interacting with dedicated accessibility APIs, using various operating system features (like inter-process communication and querying user interface properties) and employing hooking techniques. [6] 即，盲人使用的读屏辅助设备。
