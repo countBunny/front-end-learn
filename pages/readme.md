@@ -48,3 +48,24 @@ Hide an element to all devices except screen readers with .sr-only. Combine .sr-
 ```
 该属性对所有设备都不可见，只有screenreader才能显示出来。
 >A screen reader is a form of assistive technology (AT) which is essential to people who are blind, as well as useful to people who are visually impaired, illiterate, or have a learning disability. Screen readers are software applications that attempt to convey what people with normal eyesight see on a display to their users via non-visual means, like text-to-speech,[4], sound icons,[5] or a Braille device.[2] They do this by applying a wide variety of techniques that include for example interacting with dedicated accessibility APIs, using various operating system features (like inter-process communication and querying user interface properties) and employing hooking techniques. [6] 即，盲人使用的读屏辅助设备。
+
+### 自定义Headings
+可以在headings中创建小一号的次标题字。
+```html
+<h3>this is main words<small class="text-muted"> with secondary words behind</small></h3>
+```
+<img src="./screenshots/custom_headings.png" width="300">  
+
+### text-capitalize首字母大写
+只改变每个单词的第一个字母，其他字母不受影响。
+```html
+<p class="text-capitalize">CapiTaliZed text.</p>
+```
+### quick generate a inline lists
+```html
+    <ul class="list-inline">
+        <li class="list-inline-item">Lorem ipsum5</li>
+        <li class="list-inline-item">Lorem ipsum6</li>
+        <li class="list-inline-item">Lorem ipsum7</li>
+    </ul>
+```
