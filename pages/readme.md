@@ -69,3 +69,28 @@ Hide an element to all devices except screen readers with .sr-only. Combine .sr-
         <li class="list-inline-item">Lorem ipsum7</li>
     </ul>
 ```
+### \<a>设置成button的disable有点不同
+- a标签不支持disable属性，所以得通过.disable来应用disable属性
+```html
+<a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
+<a href="#" class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">Link</a>
+```
+
+### justify-content-*属性需要放在class属性的最后
+justify-content-between或者justify-content-center需要放在class属性的最后才能起到调整布局的作用。
+```html
+    <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group" role="group" aria-label="First group">
+            <button type="button" class="btn btn-secondary">1</button>
+            <button type="button" class="btn btn-secondary">2</button>
+            <button type="button" class="btn btn-secondary">3</button>
+            <button type="button" class="btn btn-secondary">4</button>
+        </div>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text" id="btnGroupAddon2">@</div>
+            </div>
+            <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon2">
+        </div>
+    </div>
+```

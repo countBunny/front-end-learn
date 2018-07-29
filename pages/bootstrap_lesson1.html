@@ -62,9 +62,10 @@
         </tbody>
     </table>
     <table class="table table-md table-light">
-        <thead>
+        <caption class="sr-only">List of colors</caption>
+        <thead class="thead-dark">
             <tr>
-                <th>color</th>
+                <th scope="col">color</th>
             </tr>
         </thead>
         <tbody>
@@ -107,7 +108,9 @@
         <div id="navbarNav" class="collapse navbar-collapse">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Features</a>
@@ -130,33 +133,132 @@
     </nav>
     <div class="blockquote text-center">
         <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-        <div class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite> that it is</div>
+        <div class="blockquote-footer">Someone famous in
+            <cite title="Source Title">Source Title</cite> that it is</div>
     </div>
     <p class="text-capitalize">CapiTaliZed text.</p>
     <p class="text-italic">Italic text.</p>
-    <h3>this is main words<small class="text-muted"> with secondary words behind</small></h3>
+    <h3>this is main words
+        <small class="text-muted"> with secondary words behind</small>
+    </h3>
     <ul class="list-inline">
         <li class="list-inline-item">Lorem ipsum5</li>
         <li class="list-inline-item">Lorem ipsum6</li>
         <li class="list-inline-item">Lorem ipsum7</li>
     </ul>
     <!-- 巧妙利用12格布局实现代描述的列表 -->
-    <dl class="row">
+    
+    <dl class="row">
         <dt class="col-sm-3">Description lists</dt>
         <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
         <dt class="col-sm-3">Euismod</dt>
-        <dd class="col-sm-9"><p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
-        <p>Donec id elit non mi porta gravida at eget metus.</p></dd>
+        <dd class="col-sm-9">
+            <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
+            <p>Donec id elit non mi porta gravida at eget metus.</p>
+        </dd>
         <dt class="col-sm-3">Malesuada porta</dt>
         <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
         <dt class="col-sm-3">Vestibulum tempus</dt>
         <dd class="col-sm-9">nunc in pretium finibus, tellus erat mattis ante, vitae elementum nisi nulla eget.</dd>
         <dt class="col-sm-3">Etiam at.</dt>
-        <dd class="col-sm-9"><dl class="row">
-            <dt class="col-sm-4">Interdum et malesuada.</dt>
-            <dd class="col-sm-8">Sed nunc urna, luctus in diam a, suscipit interdum erat. Nulla vitae rutrum.</dd>
-        </dl></dd>
+        <dd class="col-sm-9">
+            <dl class="row">
+                <dt class="col-sm-4">Interdum et malesuada.</dt>
+                <dd class="col-sm-8">Sed nunc urna, luctus in diam a, suscipit interdum erat. Nulla vitae rutrum.</dd>
+            </dl>
+        </dd>
     </dl>
+    <figure class="figure">
+        <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22400%22%20height%3D%22300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_164e527bc32%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A20pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_164e527bc32%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22148.1953125%22%20y%3D%22159.3046875%22%3E400x300%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+            alt="" class="figure-img img-fluid rounded">
+        <figcaption class="figure-caption text-right">A caption for the above image.</figcaption>
+    </figure>
+    <!-- alert -->
+    <div class="alert alert-success" role="alert">This is a success alert - check it out!</div>
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        <h4 class="alert-heading">Well done!</h4>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that
+            you can see how spacing within an alert works with this kind of content.</p>
+        <hr>
+        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+    </div>
+    <!-- badge -->
+    <h4>Example heading
+        <span class="badge badge-secondary ml-2 align-top">New</span>
+    </h4>
+    <button class="btn btn-primary" type="button">Notifications
+        <span class="badge badge-pill badge-light">4</span>
+        <span class="sr-only">unread messages</span>
+    </button>
+    <!-- breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="#">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="#">Library</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                <a href="#">Data</a>
+            </li>
+        </ol>
+    </nav>
+    <!-- button -->
+    <button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
+    <button type="button" class="btn btn-secondary btn-lg btn-block active" disabled>Block level button</button>
+    <hr>
+    <button class="btn btn-primary" type="button" data-toggle="button" aria-pressed="false" autocomplete="off">Single toggle</button>
+    <div class="btn-group-vertical btn-group-toggle col-12 my-2 p-0" data-toggle="buttons">
+        <label for="" class="btn btn-secondary active">
+            <input type="radio" name="options" id="options1" autocomplete="off" checked>Active</label>
+        <label for="" class="btn btn-secondary">
+            <input type="radio" name="options" id="options2" autocomplete="off">Radio</label>
+        <label for="" class="btn btn-secondary">
+            <input type="radio" name="options" id="options3" autocomplete="off">Radio</label>
+    </div>
+    <hr>
+    <!-- btn groups -->
+    <div class="btn-toolbar mb-2 justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+            <button class="btn btn-secondary" type="button">1</button>
+            <button class="btn btn-secondary" type="button">2</button>
+            <button class="btn btn-secondary" type="button">3</button>
+            <button class="btn btn-secondary" type="button">4</button>
+        </div>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text" id="btnGroupAddon">@</div>
+            </div>
+            <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon">
+        </div>
+    </div>
+    <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group" role="group" aria-label="First group">
+            <button type="button" class="btn btn-secondary">1</button>
+            <button type="button" class="btn btn-secondary">2</button>
+            <button type="button" class="btn btn-secondary">3</button>
+            <button type="button" class="btn btn-secondary">4</button>
+            <div class="btn-group" role="group">
+                    <button class="btn btn-secondary dropdown-toggle" id="btnGroupDrop1" type="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expended="false">Dropdown</button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a href="#" class="dropdown-item">Dropdown link</a>
+                        <a href="#" class="dropdown-item">Dropdown link</a>
+                    </div>
+                </div>
+        </div>
+        
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text" id="btnGroupAddon2">@</div>
+            </div>
+            <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon2">
+        </div>
+    </div>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
