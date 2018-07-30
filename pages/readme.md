@@ -94,3 +94,12 @@ justify-content-between或者justify-content-center需要放在class属性的最
         </div>
     </div>
 ```
+## css引入的rem单位
+如果没有设置，html是以“16px”为基准的，如果要设置成10px则：
+```css
+html {font-size: 62.5%;/*10 ÷ 16 × 100% = 62.5%*/}
+body {font-size: 1.4rem;/*1.4 × 10px = 14px */}
+h1 { font-size: 2.4rem;/*2.4 × 10px = 24px*/}
+```
+使用“rem”就像使用“px”一样的方便，而且同时解决了“px”和“em”两者不同之处。
+
