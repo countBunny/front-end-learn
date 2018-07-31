@@ -94,6 +94,7 @@ justify-content-between或者justify-content-center需要放在class属性的最
         </div>
     </div>
 ```
+要使用这个属性需要指定div容器是`.d-flex`，否则此设置无效。
 ## css引入的rem单位
 如果没有设置，html是以“16px”为基准的，如果要设置成10px则：
 ```css
