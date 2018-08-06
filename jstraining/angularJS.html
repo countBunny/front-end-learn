@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <script src="angular1.4.6.min.js"></script>
+</head>
+
+<body>
+  <div ng-app="myApp" ng-controller="myCtrl">
+    <p>姓名 :
+      <input type="text" ng-model="name" placeholder="在这里输入您的大名">
+    </p>
+    <h1>你好，{{name}}</h1>
+  </div>
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope) {
+      $scope.firstName = "John";
+      $scope.lastName = "Doe";
+      $scope.name = "name";
+    });
+  </script>
+</body>
+
+</html>
