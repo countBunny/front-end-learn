@@ -1,0 +1,18 @@
+var search = new Vue({
+    el: "#my_view",
+    data: {
+        name: 'Ashley',
+        age: 24,
+        friends: [{
+            name: 'Bob',
+            age: 21
+        }, {
+            name: 'Jane',
+            age: 20
+        }, {
+            name: 'Anna',
+            age: 29
+        }],
+        search: ''
+    }
+})

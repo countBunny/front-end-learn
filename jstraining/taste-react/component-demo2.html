@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="react.js"></script>
+    <script src="react-dom.js"></script>
+    <script src="babel.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+        class MyTitle extends React.Component {
+            constructor(...args) {
+                super(...args);
+                this.state = {
+                    name: '访问者',
+                    word: 'world',
+                    isClicked: false
+                };
+            }
+        
+            handleChange(e) {
+                let name = e.target.value;
+                this.setState({
+                    name: name
+                });
+            }
+
+            handleClick(e){
+                let clicked = !this.state.isClicked;
+                console.log(clicked);
+                if (clicked) {
+                    let date = new Data();
+                    let dateStr = date.getFullYear() + ' - ' + (date.getMonth()+1)+' - ' + date.getDate();
+                    console.log(dateStr);
+                    this.setState({
+                    isClicked: clicked,
+                    word: dateStr
+                });
+                } else {
+                    this.setState({
+                    isClicked: clicked,
+                    word: 'world'
+                });
+                }
+                
+            }
+
+            render() {
+                return <div style={{color:this.props.color}}>
+                        <button onClick={this.handleClick.bind(this)}>{'Hello ' + this.state.word}</button>
+                        <input type="text" onChange={this.handleChange.bind(this)}/>
+                        <p>你好，{this.state.name}</p>
+                    </div>;
+            }
+
+        };
+        ReactDOM.render(
+            <MyTitle color="black"/>,
+            document.getElementById('example')
+        );
+    </script>
+
+</body>
+
+</html>
