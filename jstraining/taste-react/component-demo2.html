@@ -35,7 +35,7 @@
                 let clicked = !this.state.isClicked;
                 console.log(clicked);
                 if (clicked) {
-                    let date = new Data();
+                    let date = new Date();
                     let dateStr = date.getFullYear() + ' - ' + (date.getMonth()+1)+' - ' + date.getDate();
                     console.log(dateStr);
                     this.setState({
