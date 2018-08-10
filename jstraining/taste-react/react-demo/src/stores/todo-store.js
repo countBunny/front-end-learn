@@ -15,7 +15,7 @@ class TodoStore {
     return this.todos.filter(todo => todo.completed === true).length;
   }
 
-  report() {
+  get report() {
     if (this.todos.length === 0) return "<none>";
     return (
       `Next todo: "${this.todos[0].task}". ` +
@@ -33,7 +33,9 @@ class TodoStore {
 }
 decorate(TodoStore,{
   todos: observable,
-  pendingRequests: observable
+  pendingRequests: observable,
+  completedTodosCount: computed,
+  report: computed
 });
 
 class Store {
@@ -48,5 +50,7 @@ decorate(Store, {
   decorated: computed
 });
 
-const todoStore = new TodoStore();
-export default Store;
+export {
+  Store,
+  TodoStore
+};
