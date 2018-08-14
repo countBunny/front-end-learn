@@ -1,6 +1,13 @@
 {
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "rules": {
-      "no-console":"off"
+    "no-console": "off",
+    "semi": ["error", "always"]
   }
 }
-//"extends": "airbnb-base",
