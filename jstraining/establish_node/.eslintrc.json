@@ -8,6 +8,6 @@
   },
   "rules": {
     "no-console": "off",
-    "semi": ["error", "always"]
+    "semi": 2
   }
 }
