@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/survey.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <div id="main">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">just for a test</p>
+        <form id="survey-form" method="GET" action="https://crossorigin.me/https://freecodecamp.com">
+            <div class="form-item">
+                <label for="name" id="name-label">name: </label>
+                <input id="name" placeholder="input your name" type="text" required>
+            </div>
+            <div class="form-item">
+                <label for="email" id="email-label">email: </label>
+                <input id="email" placeholder="input your email" type="email" required>
+            </div>
+            <div class="form-item">
+                <label for="number" id="number-label">age: </label>
+                <input type="number" id="number" placeholder="your age" min="1" max="125">
+            </div>
+            <div class="form-item">
+                <label for="dropdown" id="select-position">your position:</label>
+                <select name="currentPos" id="dropdown">
+                    <option value="student">Student</option>
+                    <option value="job">Full Time Job</option>
+                    <option value="learner">Full Time Learner</option>
+                    <option value="preferNo">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <fieldset>
+                <legend>How likely is that you would recommend freecodecamp to your friend?</legend>
+                <input type="radio" id="definitely" name="recommend">
+                <label for="definitely">Definitely</label><br>
+                <input type="radio" id="maybe" name="recommend">
+                <label for="maybe">Maybe</label><br>
+                <input type="radio" id="notsure" name="recommend">
+                <label for="notsure">Not sure</label><br>
+            </fieldset>
+            <fieldset id="field_improve">
+                <legend>Things that should be improved in the future(Check all that apply):</legend>
+                <input type="checkbox" name="improve" id="improve_front_end_project">
+                <label for="improve_front_end_project">Front-end Projects</label><br>
+                <input type="checkbox" name="improve" id="improve_data_vis">
+                <label for="improve_data_vis">Data Visualization</label><br>
+                <input type="checkbox" name="improve" id="improve_back_end_project">
+                <label for="improve_front_end_project">Back-end Projects</label><br>
+            </fieldset>
+            <div class="form-item div_comments">
+                <label for="comments">Any suggestions?</label>
+                <textarea name="comments" id="comments" placeholder="any thing to help us to improve···"></textarea>
+            </div>
+            <input type="submit" name="submit" id="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+
+</html>

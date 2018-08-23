@@ -1,0 +1,96 @@
+div{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(133, 111, 132);
+}
+:root{
+    --text-header-color:white;
+}
+#main{
+    max-width: 100%;
+    width: 480px;
+    margin: auto;
+    
+}
+#title{
+    color: var(--text-header-color);
+    text-align: center;
+}
+#description{
+    color: var(--text-header-color);
+    width: 100%;
+    text-align: right;
+    font-style: italic;
+    font-weight: 300;
+    font-family: 'Times New Roman', Times, serif;
+}
+#survey-form{
+    background-color: aliceblue;
+    padding: 2em;
+    border-radius: 1vw;
+}
+
+.form-item{
+    display: flex;
+    height: 3em;
+}
+
+.form-item label{
+    width: 40%;
+    line-height: 1.5rem;
+    text-align: right;
+}
+
+.form-item input, select, option{
+    height: 1.5rem;
+    margin-left: 1em;
+}
+#dropdown {
+    height: 1.8rem;
+    width: 140px;
+    padding: 2px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+  }
+fieldset label{
+    font-size: 1em;
+}
+fieldset input{
+    margin-left: 40%;
+}
+fieldset label,fieldset input{
+    line-height: 2.5em;
+}
+#field_improve{
+    margin-top: 1em;
+}
+.div_comments{
+    height: auto;
+    flex-direction: column;
+    margin-top: 1em;
+}
+.div_comments label{
+    line-height: 2rem;
+}
+#comments{
+    height: 3em;
+    font-size: 1.2em;
+    resize: vertical;
+    max-width:100%;
+    width:70%;
+    margin: 0 auto;
+    margin-top: .5em;
+}
+#submit{
+    display: block;
+    color: white;
+    background: deepskyblue;
+    padding: .5em;
+    font-size: 1em;
+    margin: 0 auto;
+    margin-top: 1em;
+    border: 0 solid;
+    border-radius: .2em;
+}
