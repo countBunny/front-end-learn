@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product landing page</title>
+    <link rel="stylesheet" href="./css/product_land.css">
+</head>
+
+<body>
+    <header id="header">
+        <div>
+            <img src="./src/logo_white.png" alt="" id="header-img">
+            <nav id="nav-bar">
+                <ul>
+                    <li>
+                        <a class="nav-link" href="#header">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#form">Product</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#video">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST" target="_blank">
+        <input name="email" type="email" placeholder="input your email" id="email" required>
+        <input type="submit" value="Submit" id="submit">
+    </form>
+    <section id="product-details">
+        <h1>This how you would like our products</h1>
+        <ul>
+            <li>
+                <div class="detail-item">
+                    <div>
+                        <img class="icon" src="" alt="">
+                    </div>
+                    <div>
+                        <h2>Premium Materials</h2>
+                    
+                        <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of
+                            your purchase.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="detail-item">
+                    <div>
+                        <img class="icon" src="" alt="">
+                    </div>
+                    <div>
+                        <h2>Fast Shipping</h2>
+                    
+                        <p>We make sure you recieve your trombone as soon as we have finished making it. We also provide free
+                            returns if you are not satisfied.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="detail-item">
+                    <div>
+                        <img class="icon" src="" alt="">
+                    </div>
+                    <div>
+                        <h2>Quality Assurance</h2>
+                    
+                        <p>For every purchase you make, we will ensure there are no damages or faults and we will check and
+                            test the pitch of your instrument.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <video id="video" src="http://vt1.doubanio.com/201808241108/1d2f2a73119827584b1d972311d509b5/view/movie/M/301080756.mp4"
+        controls></video>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>

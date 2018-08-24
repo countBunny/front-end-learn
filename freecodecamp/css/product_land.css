@@ -1,0 +1,123 @@
+body, header, div, ul, li,h2{
+    padding: 0;
+    margin: 0;
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background-color: darkgray;
+}
+header div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    width: 960px;
+    height: 70px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+header img{
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    margin-left: 2em;
+}
+#nav-bar ul{
+    display: flex;
+}
+#nav-bar ul li{
+    margin-right: 1em;
+    list-style: none;
+}
+#nav-bar li:last-child{
+    margin-right: 2em;
+}
+#nav-bar ul li a{
+    color: white;
+    text-decoration: none;
+}
+form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%;
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 1em;
+    height: 2em;
+    background-color: darkgray;
+    padding:4px;
+    border: 0 solid;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgb(117, 117, 117) ;
+}
+form input{
+    border: 0 solid;
+    border-radius: 4px;
+    vertical-align: center;
+    height: 1.6em;
+}
+
+#product-details{
+    width: 100%;
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 1em;
+}
+#product-details h1{
+    text-align:center;
+}
+#product-details .icon{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: darkgray;
+    border-radius: 5px;
+}
+#product-details li{
+    list-style: none;
+}
+#product-details li div div{
+    float: left;
+}
+#product-details li div div:last-child{
+    max-width: 520px;
+}
+#product-details h2{
+    font-weight: 500;
+}
+#product-details li div div{
+    padding: 10px;
+}
+#video{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+@media(max-width: 500px){
+    header{
+        height: auto;
+    }
+    header div{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: auto;
+        overflow: hidden;
+    }
+    #nav-bar ul{
+        flex-direction: column;
+        margin: 1em;
+    }
+    header img{
+        margin: 1em;
+    }
+    form{
+        margin-top: 190px;
+    }
+}
